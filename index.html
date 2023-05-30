@@ -1,0 +1,11 @@
+<body>
+    <div id="output"></div>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+        const outputElement = document.querySelector("#output");
+
+        axios.get('http://127.0.0.1:5000/dt').then(function (response) { 
+            outputElement.innerHTML = JSON.stringify(response.data);
+        });
+    </script>
+</body>
